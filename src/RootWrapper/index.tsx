@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import Navbar from "../layouts/Navbar";
 import LandingPage from "../pages/LandingPage";
-import { excludeFooter, excludeNavbar } from "../utils";
+import { excludeNavbar } from "../utils";
 
 const RootWrapper = () => {
   const location = useLocation();

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useAppDispatch, useAppSelector } from "../../store/hooks";
+// import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import Devicemanagement from "./components/DeviceManagement";
 import LandingPageSidebar from "./components/LandingPageSideBar";
 import styles from "./LandingPage.module.scss";
@@ -39,8 +39,8 @@ const initialDeviceCountValue = [
   },
 ];
 const LandingPage = () => {
-  const name = useAppSelector((state) => state.user.name);
-  const dispatch = useAppDispatch();
+  // const name = useAppSelector((state) => state.user.name);
+  // const dispatch = useAppDispatch();
 
   const [selectedTab, setSelectedTab] = useState("subscription");
   const [isPlanSelected, setIsPlanSelected] = useState(false);
@@ -55,7 +55,7 @@ const LandingPage = () => {
   const [deviceManagemantData, setDeviceManagemantData] = useState(
     initialDeviceCountValue
   );
-  console.log(selectedTab, "selectedPlan");
+
   // useing constant method for now
   const stepsCompleted = [
     "location",
