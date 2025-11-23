@@ -1,0 +1,61 @@
+@use "../../styles/variables" as *;
+
+.container {
+  //   width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  background: #ffffff;
+  transition: 0.2s ease;
+
+  &:focus-within {
+    border-color: $primary;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: $baseText;
+}
+.icon {
+  font-size: 22px;
+  color: $baseGray;
+}
+
+input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: $baseText;
+  background: transparent;
+
+  &::placeholder {
+    color: $lightGray;
+  }
+}
+
+.cardInput {
+  flex: 1;
+}
+
+.expiryInput {
+  width: 80px;
+  text-align: center;
+}
+
+.cvcInput {
+  width: 60px;
+  text-align: center;
+}

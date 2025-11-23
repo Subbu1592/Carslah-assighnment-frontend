@@ -1,0 +1,32 @@
+@use "../../../../styles/variables" as *;
+
+.deviceWrapper {
+  margin-top: 0.8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  @media (max-width: 1024px) {
+    grid-template-columns: auto;
+  }
+  p {
+    font-size: 14px;
+    font-family: 100;
+    color: $lightGray;
+  }
+  .inputLabel {
+  }
+  .inputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+}
+
+.description {
+  color: black;
+  font-size: 12px;
+}
+
+.cardWrapper {
+  border-bottom: 0.8px solid $baseGray;
+}

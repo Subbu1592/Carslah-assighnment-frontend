@@ -1,0 +1,9 @@
+.image {
+  display: block;
+  border-radius: 8px;
+  transition: opacity 0.2s ease-in-out;
+
+  &.loading {
+    opacity: 0.5;
+  }
+}

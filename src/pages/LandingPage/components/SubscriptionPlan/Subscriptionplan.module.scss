@@ -1,0 +1,133 @@
+@use "../../../../styles/variables" as *;
+
+.subscriptionWrapper {
+  border: 0.8px solid $baseGray;
+  border-radius: 6px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+  .subscriptionsection1 {
+    padding: 1.5rem 2rem;
+    .subscriptionHeading {
+      color: $darkPrimary;
+    }
+    .subscriptionSubHeading {
+      color: black;
+    }
+  }
+  .subscriptionsection2,
+  .subscriptionsection3 {
+    border-top: 0.8px solid $baseGray;
+    padding: 1.5rem 2rem;
+  }
+  .selectPlanHeading {
+    color: black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+    .planForMe {
+      color: $primary;
+      border-bottom: 1px solid $primary;
+      cursor: pointer;
+    }
+  }
+  .selectPlanSubHeading {
+    color: black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+  }
+  .selectPlanFee {
+    color: $darkPrimary !important;
+    font-weight: bold !important;
+    margin-top: 4px;
+    .currencyPeriod {
+      font-weight: 100;
+      color: $primary !important;
+      font-size: 12px;
+    }
+  }
+  .cardsWrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 12px;
+    margin-top: 12px;
+    @media (max-width: 1024px) {
+      grid-template-columns: auto auto;
+    }
+    @media (max-width: 768px) {
+      grid-template-columns: auto;
+    }
+    .subscriptioncards {
+      border: 0.8px solid $baseGray;
+      border-radius: 6px;
+      box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+      padding: 0.7rem;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      justify-content: start;
+      align-items: start;
+      cursor: pointer;
+      p {
+        margin: inherit;
+      }
+    }
+    .selected--card {
+      border: 1px solid $primary;
+    }
+  }
+}
+
+.justMatesWrapper {
+  margin-top: 1rem;
+  border-top: 0.8px solid $baseGray;
+  .justMatesHeading {
+    color: #000;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  .justMatesContainer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    @media (max-width: 1024px) {
+      display: grid;
+      grid-template-columns: auto;
+    }
+  }
+  .goodMatesContainer {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    // .cardCaptionWrapper {
+    //   margin-top: 1rem;
+
+    // }
+    @media (max-width: 1024px) {
+      display: grid;
+      grid-template-columns: auto;
+    }
+  }
+}
+.cardCaption {
+  color: $lightGray;
+  margin-top: 10px;
+}
+
+.bestMatesInsuranceWrapper {
+  position: relative;
+  .commingSoontag {
+    position: absolute;
+    top: -29%;
+    left: 6%;
+    background-color: $extraLightGray;
+    font-size: 12px;
+    font-weight: 100 !important;
+    padding: 3px 8px;
+    border-radius: 6px;
+    color: $baseGray;
+  }
+}

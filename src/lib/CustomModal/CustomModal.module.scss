@@ -1,0 +1,62 @@
+@use "../../styles/variables" as *;
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+
+  animation: fadeIn 0.25s ease forwards;
+}
+
+.modal {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  position: relative;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+  animation: popIn 0.25s ease forwards;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: $baseText;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.content {
+  margin-top: 8px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
