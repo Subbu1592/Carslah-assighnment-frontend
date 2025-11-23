@@ -24,6 +24,9 @@
   cursor: pointer;
   transition: 0.2s ease;
   text-align: center;
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 
   &:hover {
     border-color: #00a3ad;
