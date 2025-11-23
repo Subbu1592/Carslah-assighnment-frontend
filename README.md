@@ -1,73 +1,104 @@
-# React + TypeScript + Vite
+# 🚗 DriveMate – Host Onboarding Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, polished onboarding system that helps car owners seamlessly set up their vehicles on the DriveMate platform.  
+Built with reusable components, clean architecture, and a step-based guided user experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Overview
 
-## React Compiler
+DriveMate simplifies host onboarding with an intuitive interface built for clarity and speed.  
+Users can:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 📍 Navigate through a multi-step onboarding flow  
+- 💳 Select subscription plans and add payment details  
+- 📱 Manage multiple devices with image uploads and dynamic fields  
+- 🧩 Use custom reusable UI components for a consistent user experience  
+- 💾 Save progress using local storage  
+- 🧭 Move between steps with a sidebar-driven navigation  
+- 🎨 Enjoy a fully SCSS-styled, modular UI  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**Frontend**
+- React 18
+- TypeScript
+- SCSS Modules
+- Vite (or Next.js if used)
+- Redux Toolkit
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+**Custom UI Components**
+- Typography  
+- Input  
+- Toggle  
+- ImageUploader  
+- Modal  
+- Dropdown  
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🗂 Project Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
+---
+
+## ✨ Key Features
+
+### ✔ Subscription Management
+- Choose subscription plans  
+- Enter and store credit card details  
+- Persist data in local storage  
+- Display stored data inside a clean popup modal  
+
+---
+
+### ✔ Device Management
+Each device entry supports:
+
+- Device type  
+- Serial number  
+- “Bringing your own device?” toggle  
+- Image upload with preview (`URL.createObjectURL`)  
+- Dynamic device support (unlimited devices)  
+
+---
+
+### ✔ Reusable Component Library
+The project ships with its own mini UI library:
+
+- `<CustomInput />`
+- `<CustomToggle />`
+- `<CustomImageUploader />`
+- `<CustomTypography />`
+- `<CustomDropDown />`
+- `<CustomModal />`
+
+Consistent styling, behavior, and SCSS-based theming across the entire app.
+
+---
+
+## 💾 Local Storage Integration
+
+Data (subscription details, device configs, etc.) is cached using a small reusable utility:
+
+```ts
+storage.set("subscriptionPlan", {
+  selectedPlan,
+  subscriptionRate,
+  creditCardDetails
+});
+
+
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+# Build for production
+npm run build
+
+
