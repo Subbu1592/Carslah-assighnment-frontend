@@ -1,0 +1,123 @@
+.navWrapper {
+  padding: 14px 16px;
+  background-color: #00a3ad;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* Mobile Sections */
+.mobileLeft,
+.mobileRight {
+  display: none;
+}
+@media (max-width: 768px) {
+  .mobileLeft,
+  .mobileRight {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.hamburger {
+  cursor: pointer;
+}
+
+.centerLogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .navWrapper {
+    justify-content: space-between;
+  }
+  .centerLogo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+/* Desktop menu */
+.desktopMenu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .desktopMenu {
+    display: none;
+  }
+}
+
+.profileIcon {
+  border-radius: 100%;
+}
+
+.navItem {
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+}
+.navItem:hover {
+  opacity: 0.8;
+}
+
+/* ------------------ MOBILE MENU ANIMATIONS ------------------ */
+.mobileMenu {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: #00a3ad;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+@media (min-width: 769px) {
+  .mobileMenu {
+    display: none;
+  }
+}
+
+.menuOpen {
+  padding: 16px;
+  max-height: 400px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menuClose {
+  padding: 0 16px;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.mobileItem {
+  padding: 10px 0;
+  font-size: 18px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.25s ease;
+  color: #fff;
+}
+.mobileItem:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffda79;
+  padding-left: 8px;
+}
+
+.mobileProfileWrapper {
+  margin-top: 12px;
+}/*# sourceMappingURL=NavBar.module.css.map */

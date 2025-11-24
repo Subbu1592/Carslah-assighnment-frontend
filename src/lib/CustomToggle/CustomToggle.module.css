@@ -1,0 +1,42 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 6px 0;
+}
+
+.label {
+  font-size: 20px;
+  color: #555;
+  font-weight: 500;
+}
+
+.toggle {
+  width: 40px;
+  height: 18px;
+  border-radius: 30px;
+  background: #cfd8dc;
+  padding: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.25s ease;
+  border: 2px solid #4aa5b5;
+}
+
+.toggle.on {
+  background: #4aa5b5;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.25s ease;
+}
+
+.toggle.on .circle {
+  transform: translateX(22px);
+}/*# sourceMappingURL=CustomToggle.module.css.map */

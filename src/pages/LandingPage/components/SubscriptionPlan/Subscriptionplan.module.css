@@ -1,0 +1,136 @@
+.subscriptionWrapper {
+  border: 0.8px solid #b2b2b2;
+  border-radius: 6px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+}
+.subscriptionWrapper .subscriptionsection1 {
+  padding: 1.5rem 2rem;
+}
+.subscriptionWrapper .subscriptionsection1 .subscriptionHeading {
+  color: #026786;
+}
+.subscriptionWrapper .subscriptionsection1 .subscriptionSubHeading {
+  color: black;
+}
+.subscriptionWrapper .subscriptionsection2,
+.subscriptionWrapper .subscriptionsection3 {
+  border-top: 0.8px solid #b2b2b2;
+  padding: 1.5rem 2rem;
+}
+.subscriptionWrapper .selectPlanHeading {
+  color: black;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+.subscriptionWrapper .selectPlanHeading .planForMe {
+  color: #00a3ad;
+  border-bottom: 1px solid #00a3ad;
+  cursor: pointer;
+}
+.subscriptionWrapper .selectPlanSubHeading {
+  color: black;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+.subscriptionWrapper .selectPlanFee {
+  color: #026786 !important;
+  font-weight: bold !important;
+  margin-top: 4px;
+}
+.subscriptionWrapper .selectPlanFee .currencyPeriod {
+  font-weight: 100;
+  color: #00a3ad !important;
+  font-size: 12px;
+}
+.subscriptionWrapper .cardsWrapper {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 12px;
+  margin-top: 12px;
+}
+@media (max-width: 1024px) {
+  .subscriptionWrapper .cardsWrapper {
+    grid-template-columns: auto auto;
+  }
+}
+@media (max-width: 768px) {
+  .subscriptionWrapper .cardsWrapper {
+    grid-template-columns: auto;
+  }
+}
+.subscriptionWrapper .cardsWrapper .subscriptioncards {
+  border: 0.8px solid #b2b2b2;
+  border-radius: 6px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+  padding: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: start;
+  align-items: start;
+  cursor: pointer;
+}
+.subscriptionWrapper .cardsWrapper .subscriptioncards p {
+  margin: inherit;
+}
+.subscriptionWrapper .cardsWrapper .selected--card {
+  border: 1px solid #00a3ad;
+}
+
+.justMatesWrapper {
+  margin-top: 1rem;
+  border-top: 0.8px solid #b2b2b2;
+}
+.justMatesWrapper .justMatesHeading {
+  color: #000;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.justMatesWrapper .justMatesContainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+@media (max-width: 1024px) {
+  .justMatesWrapper .justMatesContainer {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+.justMatesWrapper .goodMatesContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 1024px) {
+  .justMatesWrapper .goodMatesContainer {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+
+.cardCaption {
+  color: #a4a4a4;
+  margin-top: 10px;
+}
+
+.bestMatesInsuranceWrapper {
+  position: relative;
+}
+.bestMatesInsuranceWrapper .commingSoontag {
+  position: absolute;
+  top: -29%;
+  left: 6%;
+  background-color: #dddbdb;
+  font-size: 12px;
+  font-weight: 100 !important;
+  padding: 3px 8px;
+  border-radius: 6px;
+  color: #b2b2b2;
+}/*# sourceMappingURL=Subscriptionplan.module.css.map */

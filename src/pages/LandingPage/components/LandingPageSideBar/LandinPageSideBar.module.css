@@ -1,0 +1,24 @@
+.sidebarWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #00a3ad;
+  cursor: pointer;
+}
+.sidebarWrapper .sidebarLabel {
+  padding: 0.7rem;
+  color: #026786 !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 10rem;
+}
+.sidebarWrapper .selected--tab {
+  border-left: 3px solid #00a3ad;
+  font-weight: 800;
+  color: #00a3ad !important;
+}
+.sidebarWrapper .tabs--incomplete {
+  color: #b2b2b2 !important;
+}/*# sourceMappingURL=LandinPageSideBar.module.css.map */
